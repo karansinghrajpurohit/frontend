@@ -1,1 +1,16 @@
 /* Add application styles & imports to this file! */
+/* You can add global styles to this file, and also import other style files */
+@import '~@danielmoncada/angular-datetime-picker/assets/style/picker.min.css';
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.dialog-container-custom .mat-dialog-container {
+  background: rgb(78 75 76 / 87%) !important;
+  width: 88% !important;
+}
