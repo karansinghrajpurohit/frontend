@@ -19,6 +19,10 @@
       "dom"
     ]
   },
+  "include": [
+    "src/**/*.ts",
+    "typings/*.d.ts"
+  ],
   "angularCompilerOptions": {
     "enableIvy": true,
     "fullTemplateTypeCheck": true,
