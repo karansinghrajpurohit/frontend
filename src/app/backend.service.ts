@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { environment } from 'src/environments/environment';
+import { environment } from '../environments/environment';
 import { AssetDetail, AssetHistory, LuSecurityRole } from './AssetDetail';
 @Injectable({
   providedIn: 'root',

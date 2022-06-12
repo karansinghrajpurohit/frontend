@@ -1,0 +1,59 @@
+<google-map
+  [options]="options"
+  width="100%"
+  height="100%"
+  [center]="center"
+  [options]="options"
+  [zoom]="12"
+>
+  <map-marker
+    #markerElem="mapMarker"
+    *ngFor="let marker of markers"
+    [position]="marker.position"
+    [options]="marker.options"
+    (mapClick)="openInfo(markerElem, marker.data, hiddenMarker)"
+  >
+  </map-marker>
+  <map-marker
+    *ngFor="let vertice of vertices"
+    [options]="icons.History"
+    [position]="vertice"
+  >
+  </map-marker>
+  <map-marker
+    #hiddenMarker="mapMarker"
+    [position]="hiddenPos"
+    [options]="icons.hidden"
+  ></map-marker>
+  <map-info-window (closeclick)="closeClick()"></map-info-window>
+  <map-polyline [path]="vertices"></map-polyline>
+</google-map>
+<div style="display: none">
+  <input
+    id="origin-input"
+    class="controls"
+    type="text"
+    placeholder="Enter an origin location"
+  />
+
+  <input
+    id="destination-input"
+    class="controls"
+    type="text"
+    placeholder="Enter a destination location"
+  />
+  <select
+    [(ngModel)]="index"
+    id="routeIndex"
+    class="controls"
+    (change)="directionsRenderer.setRouteIndex(index)"
+  >
+    <option
+      *ngFor="let summary of summrayList; index as i"
+      [ngValue]="i"
+      [selected]="i == 0"
+    >
+      {{ summary }}
+    </option>
+  </select>
+</div>

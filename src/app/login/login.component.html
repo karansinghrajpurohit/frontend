@@ -1,0 +1,35 @@
+<div class="main">
+  <div class="form-box">
+    <div class="button-box">
+      <h3>Jumbo GPS</h3>
+    </div>
+
+    <form #id1="ngForm" class="input-group" id="login">
+      <input
+        type="text"
+        name="username"
+        class="input-field"
+        placeholder="User Id"
+        [(ngModel)]="username"
+        required
+      />
+      <input
+        type="password"
+        name="password"
+        class="input-field"
+        placeholder="Enter Password"
+        [(ngModel)]="password"
+        required
+      />
+      <input type="checkbox" class="check-box" /><span>Remember Password</span>
+      <button
+        type="submit"
+        class="submit-button"
+        [disabled]="id1.invalid"
+        (click)="login()"
+      >
+        Log In
+      </button>
+    </form>
+  </div>
+</div>
