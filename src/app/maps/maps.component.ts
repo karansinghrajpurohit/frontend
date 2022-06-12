@@ -19,7 +19,6 @@ import { BackendService } from '../backend.service';
 import { AssetDetail } from '../AssetDetail';
 import { Subscription } from 'rxjs';
 import { DataBindingService } from '../data-binding.service';
-import {} from '@types/googlemaps';
 
 TimeAgo.addDefaultLocale(en);
 
