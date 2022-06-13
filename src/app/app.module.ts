@@ -27,16 +27,16 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { TokenInterceptor } from './token.interceptor';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
-import { AngularFireMessagingModule } from '@angular/fire/messaging';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
-import { AngularFireAuthModule } from '@angular/fire/auth';
-import { AngularFireModule } from '@angular/fire';
+import { AngularFireMessagingModule } from '@angular/fire/compat/messaging';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireModule } from '@angular/fire/compat';
 import {
   DialogNotification,
   MessagingService,
 } from './service/messaging.service';
 import { environment } from '../environments/environment';
-import { AsyncPipe } from '../../node_modules/@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { IncrementInputComponent } from './increment-input/increment-input.component';
 import { ServiceWorkerModule } from '@angular/service-worker';

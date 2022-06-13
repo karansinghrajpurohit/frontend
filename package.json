@@ -26,6 +26,7 @@
     "@angular/platform-browser": "^14.0.1",
     "@angular/platform-browser-dynamic": "^14.0.1",
     "@angular/router": "^14.0.1",
+    "@angular/service-worker": "^14.0.1",
     "@danielmoncada/angular-datetime-picker": "^14.0.1",
     "@progress/kendo-angular-buttons": "^8.0.0",
     "@progress/kendo-angular-common": "^3.0.0",
