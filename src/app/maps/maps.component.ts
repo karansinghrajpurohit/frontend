@@ -1,5 +1,4 @@
 import { DatePipe } from '@angular/common';
-import {} from '@types/googlemaps';
 import {
   AfterViewInit,
   ChangeDetectorRef,
