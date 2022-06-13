@@ -1,5 +1,5 @@
 import { Component, Inject, Injectable } from '@angular/core';
-import { AngularFireMessaging } from '@angular/fire/messaging';
+import { AngularFireMessaging } from '@angular/fire/compat/messaging';
 import {
   MatDialog,
   MatDialogRef,
