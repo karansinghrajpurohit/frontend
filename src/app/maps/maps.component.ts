@@ -1,3 +1,4 @@
+/// <reference types="@types/googlemaps" />
 import { DatePipe } from '@angular/common';
 import {
   AfterViewInit,
