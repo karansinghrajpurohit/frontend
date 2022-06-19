@@ -26,18 +26,16 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    this.backend.autheticateUser(this.username, this.password).subscribe(
-      (token) => {
-        localStorage.setItem('token', token.token);
-        this.router.navigate(['/home']);
-      },
-      (err) => {
-        let payload = {};
-        payload['title'] = 'Login user';
-        payload['body'] = 'Either username or password is incorrect';
-        this.dialog.open(MessageDialogBoxComponent, { data: payload });
-      }
-    );
+    let isValid = this.backend.autheticateUser(this.username, this.password);
+    if (isValid) {
+      localStorage.setItem('username', this.username);
+      this.router.navigate(['/home']);
+    } else {
+      let payload = {};
+      payload['title'] = 'Login user';
+      payload['body'] = 'Either username or password is incorrect';
+      this.dialog.open(MessageDialogBoxComponent, { data: payload });
+    }
   }
   ngOnInit(): void {}
 }

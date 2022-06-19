@@ -90,7 +90,7 @@ export class HomeComponent implements OnInit {
   }
   assets: AssetDetail[];
   ngOnInit() {
-    if (!localStorage.getItem('token')) {
+    if (0) {
       this.router.navigate(['/login']);
     }
     this.backend.getAllAssets().subscribe((assets) => {
